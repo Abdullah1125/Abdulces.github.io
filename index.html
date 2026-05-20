@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Oyun Portfolyosu</title>
+    <style>
+        /* Sitenin genel karanlýk temasý */
+        body { 
+            background-color: #030303; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Baþlýklarýn stili */
+        h2 { margin-top: 50px; font-size: 24px; letter-spacing: 2px;}
+        
+        /* Proje Kartýnýn dýþ kutusu (Siyah üstüne koyu gri) */
+        .project-card {
+            background-color: #121212; 
+            border-radius: 12px; 
+            padding: 20px;
+            max-width: 800px; 
+            margin: 30px auto; 
+            display: flex; /* Ýçindekileri yan yana dizmek için */
+            gap: 20px;
+            text-align: left;
+            border: 1px solid #222;
+        }
+        
+        .video-container { flex: 1; }
+        .info-container { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .game-title { color: #00bfff; margin-top: 0; font-size: 18px; text-transform: uppercase;}
+        
+        /* Butonlarýn stili */
+        .btn-group { margin-top: 15px; }
+        .btn {
+            background-color: #00bfff; 
+            color: #000; 
+            padding: 10px 15px;
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block; 
+            margin-right: 10px;
+        }
+        .btn:hover { background-color: #008ccc; }
+    </style>
+</head>
+<body>
+
+    <h1 style="font-size: 40px; margin-top: 40px; letter-spacing: 5px;">STUDIO NAME</h1>
+
+    <div>
+        <h2>HAKKIMIZDA</h2>
+        <p style="font-size: 14px; color: #aaa; max-width: 900px; margin: 0 auto;">
+            Hayal etmek, hiç bu kadar gerçekçi olmamýþtý. Her gün kendimizi daha ileriye taþýyor ve sizlere daha keyifli bir deneyim sunmak için çabalýyoruz.
+        </p>
+    </div>
+
+    <div>
+        <h2>PROJELERÝMÝZ</h2>
+
+        <div class="project-card">
+            <div class="video-container">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+            </div>
+            <div class="info-container">
+                <h3 class="game-title">Mogol: Kan ve Toprak</h3>
+                <p style="font-size: 14px; color: #ccc;">
+                    Aksiyon ve macera dolu yeni projemiz. Savaþ dinamikleri ve derin hikayesiyle çok yakýnda sizlerle. (Çýkýþ: Haziran 2026)
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn">Sayfayý Ýncele</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="video-container">
+                <iframe width="100%" height="220" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+            </div>
+            <div class="info-container">
+                <h3 class="game-title">Normal Game</h3>
+                <p style="font-size: 14px; color: #ccc;">
+                    2D troll ve rage mekanikleriyle sabrýnýzý sýnayacak platform deneyimi. Sýnýrlarý zorlamaya hazýr olun.
+                </p>
+                <div class="btn-group">
+                    <a href="#" class="btn">Google Play</a>
+                    <a href="#" class="btn">Itch.io</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
