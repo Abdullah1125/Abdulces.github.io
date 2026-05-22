@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Oyun Portfolyosu</title>
     <style>
-        /* Sitenin genel karanlýk temasý */
+        /* * Genel sayfa ayarlarÄ±.
+         */
         body { 
             background-color: #030303; 
             color: #ffffff; 
@@ -14,39 +15,94 @@
             padding: 0;
         }
         
-        /* Baþlýklarýn stili */
         h2 { margin-top: 50px; font-size: 24px; letter-spacing: 2px;}
         
-        /* Proje Kartýnýn dýþ kutusu (Siyah üstüne koyu gri) */
+        /* * Ana Kart Konteyneri.
+         * Dikey dizilim (column) iÃ§in gÃ¼ncellendi.
+         */
         .project-card {
             background-color: #121212; 
             border-radius: 12px; 
             padding: 20px;
             max-width: 800px; 
             margin: 30px auto; 
-            display: flex; /* Ýçindekileri yan yana dizmek için */
+            display: flex;
+            flex-direction: column; /* Ä°Ã§erikleri alt alta dizer */
             gap: 20px;
             text-align: left;
             border: 1px solid #222;
         }
         
-        .video-container { flex: 1; }
-        .info-container { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        /* * Kart Ãœst KÄ±sÄ±m: Logo ve Metin.
+         * Logo ve yazÄ±yÄ± yan yana hizalar.
+         */
+        .card-top {
+            display: flex;
+            align-items: center; 
+            gap: 20px;
+        }
         
-        .game-title { color: #00bfff; margin-top: 0; font-size: 18px; text-transform: uppercase;}
+        .game-logo {
+            width: 100px; 
+            height: 100px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
         
-        /* Butonlarýn stili */
-        .btn-group { margin-top: 15px; }
+        .card-text {
+            flex: 1;
+        }
+        
+        /* BaÅŸlÄ±k Link Efektleri */
+        .game-title-link {
+            text-decoration: none;
+        }
+        
+        .game-title { 
+            color: #00bfff; 
+            margin: 0 0 10px 0; 
+            font-size: 22px; 
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+        
+        .game-title:hover {
+            color: #008ccc;
+        }
+        
+        .game-desc {
+            font-size: 14px; 
+            color: #ccc;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* * Video Konteyneri.
+         */
+        .card-video iframe {
+            width: 100%;
+            height: 400px; /* Videoyu bÃ¼yÃ¼ttÃ¼m, daha ÅŸÄ±k durur */
+            border-radius: 8px;
+        }
+        
+        /* * Butonlar.
+         * TasarÄ±mÄ± toparlamak iÃ§in butonlarÄ± saÄŸa yaslar.
+         */
+        .card-actions {
+            display: flex;
+            justify-content: flex-end; /* SaÄŸ alt kÃ¶ÅŸe hizalamasÄ± */
+            gap: 10px;
+        }
+        
         .btn {
             background-color: #00bfff; 
             color: #000; 
-            padding: 10px 15px;
+            padding: 10px 20px;
             text-decoration: none; 
             border-radius: 6px; 
             font-weight: bold;
             font-size: 14px;
-            display: inline-block; 
-            margin-right: 10px;
+            transition: background-color 0.2s;
         }
         .btn:hover { background-color: #008ccc; }
     </style>
@@ -56,43 +112,53 @@
     <h1 style="font-size: 40px; margin-top: 40px; letter-spacing: 5px;">STUDIO NAME</h1>
 
     <div>
-        <h2>HAKKIMIZDA</h2>
-        <p style="font-size: 14px; color: #aaa; max-width: 900px; margin: 0 auto;">
-            Hayal etmek, hiç bu kadar gerçekçi olmamýþtý. Her gün kendimizi daha ileriye taþýyor ve sizlere daha keyifli bir deneyim sunmak için çabalýyoruz.
-        </p>
-    </div>
-
-    <div>
-        <h2>PROJELERÝMÝZ</h2>
+        <h2>PROJELERÄ°MÄ°Z</h2>
 
         <div class="project-card">
-            <div class="video-container">
-                <iframe width="100%" height="220" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
-            </div>
-            <div class="info-container">
-                <h3 class="game-title">Mogol: Kan ve Toprak</h3>
-                <p style="font-size: 14px; color: #ccc;">
-                    Aksiyon ve macera dolu yeni projemiz. Savaþ dinamikleri ve derin hikayesiyle çok yakýnda sizlerle. (Çýkýþ: Haziran 2026)
-                </p>
-                <div class="btn-group">
-                    <a href="#" class="btn">Sayfayý Ýncele</a>
+            
+            <div class="card-top">
+                <img src="normalgame_logo.png" alt="Normal Game Logo" class="game-logo">
+                
+                <div class="card-text">
+                    <a href="https://oyunun-detay-sitesi.com" class="game-title-link" target="_blank">
+                        <h3 class="game-title">Normal Game</h3>
+                    </a>
+                    <p class="game-desc">
+                        2D troll ve rage mekanikleriyle sabrÄ±nÄ±zÄ± sÄ±nayacak platform deneyimi. GÃ¶rÃ¼nmez duvarlar ve sahte zeminlerle klasik beklentileri yÄ±kan bir proje.
+                    </p>
                 </div>
+            </div>
+
+            <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="card-actions">
+                <a href="#" class="btn" target="_blank">Google Play</a>
+                <a href="#" class="btn" target="_blank">Itch.io</a>
             </div>
         </div>
 
         <div class="project-card">
-            <div class="video-container">
-                <iframe width="100%" height="220" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
-            </div>
-            <div class="info-container">
-                <h3 class="game-title">Normal Game</h3>
-                <p style="font-size: 14px; color: #ccc;">
-                    2D troll ve rage mekanikleriyle sabrýnýzý sýnayacak platform deneyimi. Sýnýrlarý zorlamaya hazýr olun.
-                </p>
-                <div class="btn-group">
-                    <a href="#" class="btn">Google Play</a>
-                    <a href="#" class="btn">Itch.io</a>
+            
+            <div class="card-top">
+                <img src="mogol_logo.png" alt="Mogol Logo" class="game-logo">
+                <div class="card-text">
+                    <a href="https://mogol-detay-sayfasi.com" class="game-title-link" target="_blank">
+                        <h3 class="game-title">Mogol: Kan ve Toprak</h3>
+                    </a>
+                    <p class="game-desc">
+                        Aksiyon ve macera dolu yeni projemiz. SavaÅŸ dinamikleri ve derin hikayesiyle Ã§ok yakÄ±nda sizlerle. (Ã‡Ä±kÄ±ÅŸ: Haziran 2026)
+                    </p>
                 </div>
+            </div>
+
+            <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="card-actions">
+                <a href="#" class="btn" target="_blank">DetaylÄ± Ä°ncele</a>
             </div>
         </div>
 
