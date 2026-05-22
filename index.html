@@ -2,9 +2,9 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Oyun Portfolyosu</title>
+    <title>Portfolio (Portfolyo)</title>
     <style>
-        /* * Genel sayfa ayarları.
+        /* * Genel sayfa ayarlari.
          */
         body { 
             background-color: #030303; 
@@ -15,26 +15,38 @@
             padding: 0;
         }
         
-        h2 { margin-top: 50px; font-size: 24px; letter-spacing: 2px;}
+        h2 { margin-top: 60px; font-size: 24px; letter-spacing: 2px;}
         
-        /* * Ana Kart Konteyneri.
-         * Dikey dizilim (column) için güncellendi.
+        /* * Hakkimda bolumu.
+         */
+        .about-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .about-text {
+            font-size: 16px; 
+            color: #ccc; 
+            line-height: 1.6;
+        }
+        
+        /* * Ana proje karti konteyneri.
          */
         .project-card {
             background-color: #121212; 
             border-radius: 12px; 
-            padding: 20px;
+            padding: 25px;
             max-width: 800px; 
-            margin: 30px auto; 
+            margin: 40px auto; 
             display: flex;
-            flex-direction: column; /* İçerikleri alt alta dizer */
+            flex-direction: column;
             gap: 20px;
             text-align: left;
             border: 1px solid #222;
         }
         
-        /* * Kart Üst Kısım: Logo ve Metin.
-         * Logo ve yazıyı yan yana hizalar.
+        /* * Kart ust kisim: Logo ve aciklama hizalamasi.
          */
         .card-top {
             display: flex;
@@ -43,94 +55,120 @@
         }
         
         .game-logo {
-            width: 100px; 
-            height: 100px;
+            width: 90px; 
+            height: 90px;
             border-radius: 16px;
             object-fit: cover;
+            background-color: #222;
         }
         
         .card-text {
             flex: 1;
         }
         
-        /* Başlık Link Efektleri */
-        .game-title-link {
-            text-decoration: none;
-        }
-        
         .game-title { 
             color: #00bfff; 
-            margin: 0 0 10px 0; 
+            margin: 0 0 8px 0; 
             font-size: 22px; 
             text-transform: uppercase;
-            transition: color 0.2s ease;
-        }
-        
-        .game-title:hover {
-            color: #008ccc;
+            letter-spacing: 1px;
         }
         
         .game-desc {
             font-size: 14px; 
-            color: #ccc;
+            color: #bbb;
             margin: 0;
             line-height: 1.5;
         }
         
-        /* * Video Konteyneri.
+        /* * Kart orta kisim: Video alani.
          */
         .card-video iframe {
             width: 100%;
-            height: 400px; /* Videoyu büyüttüm, daha şık durur */
+            height: 420px;
             border-radius: 8px;
+            border: none;
         }
         
-        /* * Butonlar.
-         * Tasarımı toparlamak için butonları sağa yaslar.
+        /* * Video alti aciklama yazisi (Caption).
+         */
+        .video-caption {
+            font-size: 13px;
+            color: #888;
+            margin: 8px 0 0 0;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        /* * Kart alt kisim: Butonlar.
          */
         .card-actions {
             display: flex;
-            justify-content: flex-end; /* Sağ alt köşe hizalaması */
-            gap: 10px;
+            justify-content: flex-end;
+            gap: 12px;
         }
         
+        /* * Genel buton tasarimlari.
+         */
         .btn {
             background-color: #00bfff; 
             color: #000; 
-            padding: 10px 20px;
+            padding: 10px 24px;
             text-decoration: none; 
             border-radius: 6px; 
             font-weight: bold;
             font-size: 14px;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
-        .btn:hover { background-color: #008ccc; }
+        .btn:hover { 
+            background-color: #008ccc; 
+        }
+        
+        /* * CV Butonu ozel renk.
+         */
+        .cv-btn {
+            background-color: transparent;
+            color: #00bfff;
+            border: 2px solid #00bfff;
+        }
+        .cv-btn:hover {
+            background-color: #00bfff;
+            color: #000;
+        }
     </style>
 </head>
 <body>
 
-    <h1 style="font-size: 40px; margin-top: 40px; letter-spacing: 5px;">STUDIO NAME</h1>
+    <h1 style="font-size: 38px; margin-top: 50px; letter-spacing: 4px; text-transform: uppercase;">AD SOYAD</h1>
+
+    <div class="about-section">
+        <h2>About Me (Hakkımda)</h2>
+        <p class="about-text">
+            Merhaba, ben bir oyun geliştiriciyim. Unity ve C# kullanarak PC ve mobil platformlar için mekanik odaklı projeler ve oynanış deneyimleri üretiyorum. Geliştirdiğim güncel projelere ve detaylarına aşağıdan göz atabilirsiniz.
+        </p>
+        <div style="margin-top: 25px;">
+            <a href="#" class="btn cv-btn" target="_blank">View CV (CV'yi Görüntüle)</a>
+        </div>
+    </div>
 
     <div>
-        <h2>PROJELERİMİZ</h2>
+        <h2>My Games (Oyunlarım)</h2>
 
         <div class="project-card">
             
             <div class="card-top">
                 <img src="normalgame.png" alt="Normal Game Logo" class="game-logo">
-                
                 <div class="card-text">
-                    <a href="https://oyunun-detay-sitesi.com" class="game-title-link" target="_blank">
-                        <h3 class="game-title">Normal Game</h3>
-                    </a>
+                    <h3 class="game-title">Normal Game</h3>
                     <p class="game-desc">
-                        2D troll ve rage mekanikleriyle sabrınızı sınayacak platform deneyimi. Görünmez duvarlar ve sahte zeminlerle klasik beklentileri yıkan bir proje.
+                        2D troll ve rage mekanikleri üzerine kurulu, klasik platform alışkanlıklarını kasıtlı olarak bozan ve oyuncunun sabrını test eden mobil platform projesi.
                     </p>
                 </div>
             </div>
 
             <div class="card-video">
-                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+                <p class="video-caption">Devlog #1: Deceptive Level Design ve sahte zemin mekanikleri testi.</p>
             </div>
 
             <div class="card-actions">
@@ -144,21 +182,20 @@
             <div class="card-top">
                 <img src="mogol_logo.png" alt="Mogol Logo" class="game-logo">
                 <div class="card-text">
-                    <a href="https://mogol-detay-sayfasi.com" class="game-title-link" target="_blank">
-                        <h3 class="game-title">Mogol: Kan ve Toprak</h3>
-                    </a>
+                    <h3 class="game-title">Mogol: Kan ve Toprak</h3>
                     <p class="game-desc">
-                        Aksiyon ve macera dolu yeni projemiz. Savaş dinamikleri ve derin hikayesiyle çok yakında sizlerle. (Çıkış: Haziran 2026)
+                        Atmosferik bir dünyada geçen, yakın dövüş mekanikleri ve derin hikaye anlatımıyla desteklenmiş aksiyon-macera türündeki PC projesi.
                     </p>
                 </div>
             </div>
 
             <div class="card-video">
-                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
+                <p class="video-caption">Gameplay Trailer: Savaş dinamikleri ve ortam atmosferi (Pre-Alpha).</p>
             </div>
 
             <div class="card-actions">
-                <a href="#" class="btn" target="_blank">Detaylı İncele</a>
+                <a href="#" class="btn" target="_blank">Itch.io</a>
             </div>
         </div>
 
