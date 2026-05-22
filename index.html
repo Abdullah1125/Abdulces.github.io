@@ -135,11 +135,40 @@
             background-color: #00bfff;
             color: #000;
         }
+        /* * Üst kısımdaki GitHub butonu ve en alttaki telif hakkı (footer) stilleri.
+         */
+        .github-top-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background-color: #24292e; 
+            color: #ffffff;
+            padding: 8px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #444;
+            transition: background-color 0.2s;
+        }
+        
+        .github-top-btn:hover {
+            background-color: #000000;
+        }
+
+        .site-footer {
+            margin-top: 80px;
+            padding: 25px 0;
+            border-top: 1px solid #222;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <h1 style="font-size: 38px; margin-top: 50px; letter-spacing: 4px; text-transform: uppercase;">AD SOYAD</h1>
+    <h1 style="font-size: 38px; margin-top: 50px; letter-spacing: 4px; text-transform: uppercase;">Abdullah Çelik</h1>
 
     <div class="about-section">
         <h2>About Me (Hakkımda)</h2>
@@ -147,7 +176,8 @@
             Merhaba, ben bir oyun geliştiriciyim. Unity ve C# kullanarak PC ve mobil platformlar için mekanik odaklı projeler ve oynanış deneyimleri üretiyorum. Geliştirdiğim güncel projelere ve detaylarına aşağıdan göz atabilirsiniz.
         </p>
         <div style="margin-top: 25px;">
-            <a href="https://drive.google.com/file/d/1yGmTDl7TjZpYOCtkYD_jGU7OTsUUMfaH/view?usp=sharing" class="btn cv-btn" target="_blank">View CV (CV'yi Görüntüle)</a>
+            <a href="https://drive.google.com/file/d/1yGmTDl7TjZpYOCtkYD_jGU7OTsUUMfaH/view?usp=sharing" class="btn cv-btn" target="_blank">CV'yi Görüntüle</a>
+           <a href="https://github.com/Abdullah1125" class="btn cv-btn" target="_blank">GitHub</a>
         </div>
     </div>
 
@@ -167,7 +197,7 @@
             </div>
 
             <div class="card-video">
-                <iframe src="https://youtu.be/LtAIzy_FVcs" allowfullscreen></iframe>
+                <iframe src="https://youtu.be/embed/LtAIzy_FVcs" allowfullscreen></iframe>
                 <p class="video-caption">Devlog #1 </p>
             </div>
 
@@ -180,26 +210,54 @@
         <div class="project-card">
             
             <div class="card-top">
-                <img src="mogol_logo.png" alt="Mogol Logo" class="game-logo">
+                <img src="DawningUponHorizons.png" alt="Dawning Upon Horizons Logo" class="game-logo">
                 <div class="card-text">
                     <h3 class="game-title">Dawning Upon Horizons</h3>
                     <p class="game-desc">
-                 Mobil öncelikli, atmosferik bir taktiksel kart ve hikaye RPG'sidir. Sıkı bir 48 saatlik süre sınırı içinde kavramsallaştırılıp tamamen geliştirilen bu proje; Unity'de hızlı prototipleme, UI mimarisi ve modüler sistem tasarımı becerilerini sergiler. Yoğun ahlaki karar verme süreçlerini masaüstü esintili zar mekanikleri (RNG) ve sürükle-bırak kart stratejileriyle harmanlar
+                Masaüstü zar (RNG) mekaniklerini sürükle-bırak kart stratejisiyle harmanlayan, bir babanın ahlaki çıkmazları etrafında şekillenen ve her kararın kelebek etkisi yaratarak farklı finallere yol açtığı, 48 saattlik Gamejamde geliştirilmiş hikaye odaklı mobil RPG projesi.
                     </p>
                 </div>
             </div>
 
             <div class="card-video">
-                <iframe src="https://www.youtube.com/watch?v=RMDxc2-JxFA" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/RMDxc2-JxFA" allowfullscreen></iframe>
                 <p class="video-caption">Game Jam Prototype & Animatic & Teaser (PC Editor Capture)</p>
             </div>
 
             <div class="card-actions">
                 <a href="https://baylenin.itch.io/dawning-upon-horizons" class="btn" target="_blank">Itch.io</a>
+                 <a href="https://github.com/Abdullah1125/Dawning-Upon-Horizons" class="btn" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+         <div class="project-card">
+            
+            <div class="card-top">
+                <img src="Life Line.png" alt="Life Line" class="game-logo">
+                <div class="card-text">
+                    <h3 class="game-title">Life Line</h3>
+                    <p class="game-desc">
+          Tıbbi gerilim atmosferine sahip bir EKG ekranında geçen, refleks odaklı oynanışı ve dinamik nabız mekanikleriyle desteklenmiş bölüm bazlı 2D hayatta kalma-arcade oyun prototipi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/xyrJBPj09Ow " allowfullscreen></iframe>
+                <p class="video-caption">Prototype Teaser & Gameplay</p>
+            </div>
+
+            <div class="card-actions">
+                <a href="https://abdulces.itch.io/life-line" class="btn" target="_blank">Itch.io</a>
+                 <a href="https://github.com/Abdullah1125/Life-Line" class="btn" target="_blank">GitHub</a>
             </div>
         </div>
 
     </div>
 
+    <div class="site-footer">
+        © 2026 by Stüdyo Adı. Tüm hakları saklıdır.
+    </div>
+    
 </body>
 </html>
